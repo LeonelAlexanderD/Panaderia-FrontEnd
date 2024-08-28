@@ -1,0 +1,140 @@
+/* Estilo General */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-x: hidden; /* Evita el desplazamiento horizontal */
+}
+
+/* Header */
+header {
+    background-image: url('../img/flyerpan-100.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    overflow: hidden; /* Asegura que la imagen no sobrepase el contenedor */
+}
+
+/* Navbar */
+nav {
+    background-color: #E7A600;
+    width: 100%;
+    overflow: hidden; /* Evita que el contenido se desborde horizontalmente */
+}
+
+nav ul {
+    display: flex;
+    justify-content: center; /* Alinea las opciones del nav en el centro */
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan en múltiples líneas si es necesario */
+    max-width: 100%; /* Asegura que no se ensanchen fuera del viewport */
+}
+
+nav ul li {
+    position: relative;
+    flex-grow: 1; /* Permite que los items se distribuyan equitativamente */
+    text-align: center;
+}
+
+nav ul li a {
+    display: block;
+    padding: 15px 20px;
+    color: white;
+    text-decoration: none;
+    white-space: nowrap; /* Evita que el texto de los enlaces se rompa en varias líneas */
+}
+
+nav ul li a:hover {
+    background-color: #DDA600;
+}
+
+/* Submenú (Dropdown) */
+nav ul li ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #DDA600;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    z-index: 1; /* Asegura que el submenú aparezca sobre otros contenidos */
+}
+
+/* Mostrar el submenú al hacer hover o clic en el item */
+nav ul li:hover ul, nav ul li:focus-within ul {
+    display: block;
+}
+
+nav ul li ul li a {
+    padding: 10px 15px;
+    background-color: #DDA600;
+    white-space: nowrap; /* Evita que el texto de los enlaces se rompa en varias líneas */
+}
+
+nav ul li ul li a:hover {
+    background-color: #C69400;
+}
+
+/* Contenido Principal */
+main {
+    flex: 1;
+    padding: 20px;
+    text-align: center;
+    width: 100%; /* Asegura que el contenido principal ocupe todo el ancho */
+    box-sizing: border-box; /* Incluye padding en el ancho total */
+}
+
+/* Footer */
+footer {
+    background-color: #E7A600;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    width: 100%; /* Asegura que el footer ocupe todo el ancho */
+    box-sizing: border-box; /* Incluye padding en el ancho total */
+    position: relative;
+    bottom: 0;
+}
+
+/* Estilo Responsivo */
+@media (max-width: 785px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        width: 100%;
+        text-align: center;
+    }
+
+    nav ul li ul {
+        position: static;
+    }
+
+    header {
+        height: 150px;
+    }
+
+    main {
+        padding: 15px;
+    }
+
+    footer {
+        font-size: 14px;
+    }
+}
