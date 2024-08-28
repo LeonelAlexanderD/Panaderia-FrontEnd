@@ -1,139 +1,87 @@
-/* Estilo General */
-body {
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
     font-family: Arial, sans-serif;
-    background-color: white;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    overflow-x: hidden; /* Evita el desplazamiento horizontal */
-}
-
-/* Header */
-header {
-    background-image: url('../img/flyerpan-100.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 200px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+    margin: 0;
+    padding: 0;
+  }
+  
+/* Contenedor con la imagen de fondo */
+.header-background {
     width: 100%;
-    overflow: hidden; /* Asegura que la imagen no sobrepase el contenedor */
-}
-
-/* Navbar */
-nav {
-    background-color: #E7A600;
-    width: 100%;
-    overflow: hidden; /* Evita que el contenido se desborde horizontalmente */
-}
-
-nav ul {
-    display: flex;
-    justify-content: center; /* Alinea las opciones del nav en el centro */
+    height: 300px; /* Ajusta la altura según sea necesario */
+    background-image: url('../img/flyerpan.png'); /* Reemplaza con la ruta correcta a tu imagen */
+    background-size: cover; /* Asegura que la imagen cubra todo el ancho del contenedor */
+    background-position: center; /* Centra la imagen en el contenedor */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    position: relative; /* Posiciona de manera relativa para permitir contenido interno */
+  }
+  
+  /* Estilos del navbar */
+  nav {
+    background-color: #d3b000; /* Color de fondo del navbar */
+    padding: 10px 0; /* Espaciado superior e inferior del navbar */
+    width: 100%; /* Asegura que ocupe todo el ancho */
+    text-align: center; /* Centra los elementos dentro del navbar */
+    position: relative; /* Establece posición normal */
+    display: flex; /* Usa flexbox para alinear horizontalmente */
+    justify-content: center; /* Centra los elementos horizontalmente */
+  }
+  
+  /* Estilo de los elementos de navegación */
+  nav ul {
+    list-style: none;
     padding: 0;
     margin: 0;
-    list-style: none;
-    flex-wrap: wrap; /* Permite que los elementos se envuelvan en múltiples líneas si es necesario */
-    max-width: 100%; /* Asegura que no se ensanchen fuera del viewport */
-}
-
-nav ul li {
-    position: relative;
-    flex-grow: 1; /* Permite que los items se distribuyan equitativamente */
-    text-align: center;
-}
-
-nav ul li a {
-    display: block;
-    padding: 15px 20px;
-    color: white;
-    text-decoration: none;
-    white-space: nowrap; /* Evita que el texto de los enlaces se rompa en varias líneas */
-}
-
-nav ul li a:hover {
-    background-color: #DDA600;
-}
-
-/* Submenú (Dropdown) */
-nav ul li ul {
-    display: none;
-    position: absolute;
-    top: 100%;
+    display: flex; /* Flexbox para alinear elementos de la lista horizontalmente */
+  }
+  
+  nav ul li {
+    margin: 0 15px; /* Espacio entre los elementos de la lista */
+    position: relative; /* Relativo para submenús */
+  }
+  
+  /* Estilo del submenú */
+  nav ul li ul {
+    display: none; /* Oculto por defecto */
+    position: absolute; /* Posición absoluta para desplegar debajo */
+    top: 100%; /* Alinea justo debajo del elemento principal */
     left: 0;
-    background-color: #DDA600;
-    list-style: none;
+    background-color: #d3ac00; /* Fondo del submenú */
     padding: 0;
-    margin: 0;
-    width: 100%;
-    z-index: 1; /* Asegura que el submenú aparezca sobre otros contenidos */
-}
-
-/* Mostrar el submenú al hacer hover o clic en el item */
-nav ul li:hover ul, nav ul li:focus-within ul {
+    list-style: none;
+  }
+  
+  /* Mostrar el submenú al pasar el ratón */
+  nav ul li:hover ul {
+    display: block; /* Muestra el submenú al hacer hover */
+  }
+  
+  /* Estilo de los enlaces */
+  nav a {
+    color: white; /* Color de texto de los enlaces */
+    text-decoration: none; /* Sin subrayado */
+    padding: 10px; /* Espaciado interno */
     display: block;
-}
-
-nav ul li ul li a {
-    padding: 10px 15px;
-    background-color: #DDA600;
-    white-space: nowrap; /* Evita que el texto de los enlaces se rompa en varias líneas */
-}
-
-nav ul li ul li a:hover {
-    background-color: #C69400;
-}
-
-main {
-    flex: 1;
-    padding: 20px;
+  }
+  
+  
+  main {
+    padding-top: 100px; /* Ajusta este valor si el navbar tiene diferente altura */
     text-align: center;
-    width: 100%; /* Asegura que el contenido principal ocupe todo el ancho */
-    box-sizing: border-box; /* Incluye padding en el ancho total */
-}
-
-/* Footer */
-footer {
-    background-color: #E7A600;
+  }
+  
+  footer {
+    background-color: #d89b00;
     color: white;
     text-align: center;
-    padding: 10px 0;
-    width: 100%; /* Asegura que el footer ocupe todo el ancho */
-    box-sizing: border-box; /* Incluye padding en el ancho total */
-    position: relative;
+    padding: 1rem;
+    width: 100%;
+    position: fixed;
     bottom: 0;
-}
-
-/* Estilo Responsivo */
-@media (max-width: 785px) {
-    nav ul {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    nav ul li {
-        width: 100%;
-        text-align: center;
-    }
-
-    nav ul li ul {
-        position: static;
-    }
-
-    header {
-        height: 150px;
-    }
-
-    main {
-        padding: 15px;
-    }
-
-    footer {
-        font-size: 14px;
-    }
-}
+  }
+  
