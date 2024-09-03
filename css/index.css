@@ -85,3 +85,15 @@
     bottom: 0;
   }
   
+  .tittle{
+    margin: 10px auto;
+    padding: 0.5em;
+    font-size: 35px;
+    font-style: bold;
+  }
+
+  .tittle h1{
+    font-size: 65px;
+  }
+
+  
