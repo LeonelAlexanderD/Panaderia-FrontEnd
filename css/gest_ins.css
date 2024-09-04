@@ -19,12 +19,6 @@ body {
     max-height: 55px;
 }
 
-footer{
-    min-height: 130px;
-    display: flex;
-    color: white;
-    align-items: center;
-}
 
 .color-nav{
     background-color: #eab306;
@@ -44,13 +38,13 @@ nav ul li a:hover {
 }
 
 main {
+    display: flex;
     flex-direction: column;
     height: 100%;
-    display: flex;
-    flex: 1;
     width: 100%;
-    padding: 15% 10px;
+    padding: 15% 15px;
     align-content: center;
+    text-align: center;
     justify-content: center;
 }
 
@@ -60,6 +54,9 @@ main {
     border-radius: 100px;
     border: solid 1px #695103;
     text-align: center;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
     width: 95%;
     height: 100%;
     font-size: 20px;
