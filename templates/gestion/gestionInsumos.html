@@ -5,18 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gestion de Productos</title>
     <!--logo de la ventana -->
-    <link rel="shortcut icon" href="../img/logo panaderia.png">
+    <link rel="shortcut icon" href="/templates/resources/srcImg/logo panaderia.png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <!--<link rel="stylesheet" href="css/gestion_insumos.css">-->
-    <link rel="stylesheet" href="../css/gest_ins.css">
+    <link rel="stylesheet" href="/css/gest_ins.css">
   </head>
 <body class="grid-container">
       <header class="header">
-        <div><img src="../img/flyerpan.png" class="img-fluid image" alt="flyer panificadora"></div>
+        <div><img src="/templates/resources/srcImg/flyerpan.png" class="img-fluid image" alt="flyer panificadora"></div>
         <nav class="navbar navbar-expand-lg color-nav">
           <div class="container-fluid">
-            <img src="../img/logo panaderia.png" class="navbar-brand imagen-icn" alt="logo panaderia">
+            <img src="/templates/resorces/srcImg/logo panaderia.png" class="navbar-brand imagen-icn" alt="logo panaderia">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
@@ -58,9 +58,34 @@
           </div>
         </nav>
       </header>
+      <!-- cambios realizados -->
       <main>
-
-      
+        <table class="table-style">
+          <thead >
+            <tr>
+              <td>Código</td>
+              <td>Producto</td>
+              <td>Stock</td>
+              <td>Estado</td>
+            </tr>
+          </thead>
+          <tbody class="tb">
+             <tr>
+                <td>1234</td>
+                <td>Harina</td>
+                <td>5 Kg</td>
+                <td>Pedido en camino</td>
+             </tr>
+             <tr>
+                <td>4321</td>
+                <td>Azucar</td>
+                <td>3 Kg</td>
+                <td>------------</td>
+              </tr>
+          </tbody>
+        </table>
+      </div>
+      <button type="button" class="button-style">Agregar</button>
       </main>
       <footer class="footer w-200 d-flex align-items justify-content-center flex-warp" style="background-color: #eab306;">
         <span class="fs-5 px-3">Derechos Reservados Panadería El Maná</span>
