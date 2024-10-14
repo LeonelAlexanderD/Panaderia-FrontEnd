@@ -8,71 +8,15 @@
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-  }
-  
-/* Contenedor con la imagen de fondo */
-/* .header-background {
-    width: 100%;
-    height: 300px; 
-    background-image: url('../img/flyerpan.png'); 
-    background-size: cover; 
-    background-position: center; 
-    background-repeat: no-repeat;
-    position: relative; 
-  }
-   */
-  /* Estilos del navbar */
-  /* nav {
-    background-color: #d3b000; 
-    padding: 10px 0; 
-    width: 100%; 
-    text-align: center; 
-    position: relative;
-    display: flex; 
-    justify-content: center; 
-  } */
-  
-  /* Estilo de los elementos de navegación */
-  /* nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex; 
-  }
-  
-  nav ul li {
-    margin: 0 15px; 
-    position: relative;
-  } */
-  
-  /* Estilo del submenú */
-  /* nav ul li ul {
-    display: none;
-    position: absolute;
-    top: 100%; 
-    left: 0;
-    background-color: #d3ac00; 
-    padding: 0;
-    list-style: none;
-  } */
-  
-  /* Mostrar el submenú al pasar el ratón */
-  /* nav ul li:hover ul {
-    display: block; 
-  } */
-  
-  /* Estilo de los enlaces */
-  /* nav a {
-    color: white;
-    text-decoration: none; 
-    padding: 10px; 
-    display: block;
-  } */
+    min-height: 100vh; 
+    }
   
   
   main {
+    flex-grow: 1;
     padding-top: 100px; 
     text-align: center;
+    height: 100%;
   }
   
   
@@ -91,3 +35,10 @@
     min-height: 16px;
     max-height: 55px;
   }
+
+.grid-container{
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  height: 100%;
+}
